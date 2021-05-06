@@ -9,11 +9,11 @@ $settings = array(
 );
 
 $url = 'https://api.twitter.com/1.1/followers/ids.json';
-            $getfield = '?screen_name=KikiPehar';
-            $requestMethod = 'GET';
+$getfield = '?screen_name=KikiPehar';
+$requestMethod = 'GET';
 
-            $twitter = new TwitterAPIExchange($settings);
-            echo $twitter->setGetfield($getfield)
-                ->buildOauth($url, $requestMethod)
-                ->performRequest();
+$twitter = new TwitterAPIExchange($settings);
+echo $twitter->setGetfield($getfield)
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
 ?>
