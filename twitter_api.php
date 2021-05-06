@@ -8,17 +8,12 @@ $settings = array(
     'consumer_secret' => "YKflVrwa5soGyoFiNQuDlGr9BRZ03xGdkQF7Dj6URl2hgU7zDY"
 );
 
-$url = 'https://api.twitter.com/1.1/blocks/create.json';
-$requestMethod = 'POST'; 
+$url = 'https://api.twitter.com/1.1/followers/ids.json';
+            $getfield = '?screen_name=KikiPehar';
+            $requestMethod = 'GET';
 
-$postfields = array(
-    'screen_name' => 'usernameToBlock', 
-    'skip_status' => '1'
-);
-
-$twitter = new TwitterAPIExchange($settings);
-echo $twitter->buildOauth($url, $requestMethod)
-    ->setPostfields($postfields)
-    ->performRequest();
-
+            $twitter = new TwitterAPIExchange($settings);
+            echo $twitter->setGetfield($getfield)
+                ->buildOauth($url, $requestMethod)
+                ->performRequest();
 ?>
