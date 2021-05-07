@@ -1,3 +1,7 @@
+<?php
+$test = 1;
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,6 +10,11 @@
   <link rel="stylesheet" type="text/css" href="" />
 </head>
 <body>
-  <h1><?php $titel="Startseite"; ?></h1>
+  <h1>Test</h1>
+  <div>
+    <?php if($test<=1) : ?>
+      <p> Test erfolgreich </p>
+    <?php endif; ?>
+  </div>
 </body>
 </html>
