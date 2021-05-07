@@ -1,7 +1,3 @@
-<?php
-$titel = "Startseite";
-?>
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
