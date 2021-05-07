@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Test</title>
-    <link rel="stylesheet" type="text/css" href="" />
-</head>
-<body>
-    <h1>Titel</h1>
-    
     <?php
     require_once('TwitterAPIExchange.php');
 
@@ -27,5 +17,4 @@
         ->buildOauth($url, $requestMethod)
         ->performRequest();
     ?>
-</body>
-</html>
+
