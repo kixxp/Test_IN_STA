@@ -8,25 +8,25 @@ $settings = array(
     'consumer_secret' => "YKflVrwa5soGyoFiNQuDlGr9BRZ03xGdkQF7Dj6URl2hgU7zDY"
 );
 
-$url = 'https://api.twitter.com/1.1/followers/ids.json';
-$requestMethod = 'POST'; 
+$url = 'https://upload.twitter.com/1.1/media/upload.json';
+$getfield = '?command=STATUS&media_id=710511363345354753';
+$requestMethod = 'GET';
 
 $twitter = new TwitterAPIExchange($settings);
-echo $twitter->buildOauth($url, $requestMethod);
+echo $twitter->setGetfield($getfield)
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
 
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
     <link rel="stylesheet" type="text/css" href="" />
 </head>
 <body>
-    <h1>Startseite</h1>
-    <blockquote class="twitter-tweet" data-lang="en">
-    <p lang="de" dir="ltr">Wir sind doch nur Marionetten der Politik, die uns von vorne bis hinten fickt.</p>&mdash; Kristijan Pehar (@KikiPehar) <a href="https://twitter.com/KikiPehar/status/1017543367977299968">13. Juli 2018</a>
-    </blockquote>
+    <h1>Titel</h1>
 </body>
 </html>
