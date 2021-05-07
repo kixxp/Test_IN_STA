@@ -13,11 +13,6 @@ $getfield = '?command=STATUS&media_id=710511363345354753';
 $requestMethod = 'GET';
 
 $twitter = new TwitterAPIExchange($settings);
-echo $twitter->setGetfield($getfield)
-    ->buildOauth($url, $requestMethod)
-    ->performRequest();
-echo $twitter->httpStatusCode;
-
 ?>
 
 <!DOCTYPE html>
