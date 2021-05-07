@@ -6,6 +6,6 @@
   <link rel="stylesheet" type="text/css" href="" />
 </head>
 <body>
-  <h1><?php $titel; ?></h1>
+  <h1><?php $titel="Startseite"; ?></h1>
 </body>
 </html>
